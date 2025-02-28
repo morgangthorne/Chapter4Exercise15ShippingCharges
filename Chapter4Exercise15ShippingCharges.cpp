@@ -16,7 +16,7 @@ int main()
 //Rates for package weight
     double PackageWeight;
 //Rate per 500 miles shipped
-    double Rate;
+    double Rate = 0;
     double miles;
 
 //Display Menu
