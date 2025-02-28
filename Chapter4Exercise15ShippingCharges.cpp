@@ -20,9 +20,20 @@ int main()
     double miles;
 
 //Display Menu
-    cout << fixed << setw(70) << right << "Fast Freight Shipping Company Rates" <<  endl;
-    cout << setw(50) << "Weight of Package (in Kilograms)" << setw(60) << right << "Rate per 500 Miles Shipped" << endl;
-
+    cout << setw(20) << right << "|" << setw(60) << "Fast Freight Shipping Company Rates" << setw(26) << "|" << endl;
+    cout << setw(20) << right << "|" << setw(21) << "Weight of Package (in Kilograms)";
+    cout << setw(54) << right << "Rate per 500 Miles Shipped|" << endl;
+    cout << setw(20) << right << "|" << "2 KG or less" << setw(52) << right << "$1.10" << setw(22) << right << "|" << endl;
+    cout << setw(20) << right << "|" << "Over 2 KG but not more than 6 KG" << setw(32) << right << "$2.20";
+    cout << setw(22) << right << "|" << endl;
+    cout << setw(20) << right << "|" << "Over 6 KG but not more than 10 KG" << setw(31) << right << "$3.70";
+    cout << setw(22) << right << "|" << endl;
+    cout << setw(20) << right << "|" << "Over 10 KG but not more than 20 KG" << setw(30) << right << "$4.80";
+    cout << setw(22) << right << "|" << endl;
+    cout << setw(106) << right << "|_____________________________________________________________________________________|" << endl;
+    
+    //User entering Weight of package, using else if to assign amount to rate
+    cout << endl;
     cout << "What is the weight of the package in KG?: ";
     cin >> PackageWeight;
 
@@ -36,22 +47,22 @@ int main()
     {
         if (PackageWeight <= 2) {
             Rate = 1.10;
-            cout << "You have rate A" << endl;
+            cout << "Rate per 500 miles: $1.10" << endl;
         }
         else if (PackageWeight <= 6) {
             Rate = 2.20;
-            cout << "You have rate B" << endl;
+            cout << "Rate per 500 miles: $2.20" << endl;
         }
         else if (PackageWeight <= 10) {
             Rate = 3.70;
-            cout << "You have rate C" << endl;
+            cout << "Rate per 500 miles: $3.70" << endl;
         }
         else if (PackageWeight <= 20) {
             Rate = 4.80;
-            cout << "You have rate D" << endl;
+            cout << "Rate per 500 miles: $4.80" << endl;
         }
 
-
+        //User enters miles, miles and rate will be put into a function to determine shipping rate
         cout << "How many miles are you shipping your package?: ";
         cin >> miles;
 
