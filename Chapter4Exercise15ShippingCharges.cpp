@@ -72,7 +72,7 @@ int main()
             cout << "Please enter a distance within the companies limits: " << endl;
             cin >> miles;
         }
-        
+        //Final Shipping Rate for customer
         double shippingRate = (Rate/500) * miles;
         cout << "The price of shipping is $" << fixed << setprecision(2) << shippingRate;
     }
